@@ -9,9 +9,8 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
-        icon: 'https://vitejs.dev/logo.svg',
         namespace: 'npm/vite-plugin-monkey',
-        match: ['https://www.openstreetmap.org/'],
+        match: ['https://www.openstreetmap.org/changeset/*'],
       },
       build: {
         externalGlobals: {
