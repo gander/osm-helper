@@ -1,4 +1,4 @@
-# OSM Gander Helper
+# OSM Helper
 
 A UserScript to enhance the OpenStreetMap (OSM) editing experience.
 
@@ -19,7 +19,7 @@ These tools help mappers quickly access additional information and perform quali
 ## Installation
 
 1. Install a UserScript manager like Tampermonkey or Greasemonkey in your browser.
-2. Click on the `osm-gander-helper.user.js` file in releases.
+2. Click on the `osm-helper.user.js` file in releases.
 
 ## Usage
 
