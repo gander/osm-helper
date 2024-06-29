@@ -1,5 +1,7 @@
 {
   "name": "osm-gander-helper",
+  "description": "OSM Helper",
+  "author": "Adam Gąsowski (gander)",
   "private": true,
   "version": "0.0.0",
   "type": "module",
