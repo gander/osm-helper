@@ -38,6 +38,11 @@
         "dist/**/*.js"
       ],
       "releaseName": "v${version}"
+    },
+    "hooks": {
+      "after:bump": [
+        "npm run build"
+      ]
     }
   }
 }
