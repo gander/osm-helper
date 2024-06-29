@@ -10,8 +10,8 @@ This script adds convenient links to popular OSM tools directly on the OSM websi
 - [ ] OSMCha
 - [ ] OSM History Viewer
 - [ ] Map Compare
-- [ ] Changeset by Comparison Visualization
-- [ ] Achavi - Augmented OSM Change Viewer
+- [x] Changeset by Comparison Visualization
+- [x] Achavi - Augmented OSM Change Viewer
 - [ ] AI integration to assist with mapping tasks
 
 These tools help mappers quickly access additional information and perform quality checks on their edits.
