@@ -10,11 +10,12 @@ export default defineConfig({
       entry: 'src/main.ts',
       userscript: {
         namespace: 'npm/vite-plugin-monkey',
-        match: ['https://www.openstreetmap.org/changeset/*'],
+        match: ['*://www.openstreetmap.org/*'],
       },
       build: {
         externalGlobals: {
           vue: cdn.jsdelivr('Vue', 'dist/vue.global.prod.js'),
+          '@violentmonkey/url': cdn.jsdelivr('VM', 'dist/index.js'),
         },
       },
     }),

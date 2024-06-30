@@ -12,6 +12,7 @@
     "release": "release-it"
   },
   "dependencies": {
+    "@violentmonkey/url": "^0.1.0",
     "vue": "^3.4.31"
   },
   "devDependencies": {
