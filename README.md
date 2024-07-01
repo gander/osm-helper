@@ -7,7 +7,7 @@ A UserScript to enhance the OpenStreetMap (OSM) editing experience.
 This script adds convenient links to popular OSM tools directly on the OSM website:
 
 - [ ] Osmose
-- [ ] OSMCha
+- [x] OSMCha
 - [ ] OSM History Viewer
 - [ ] Map Compare
 - [x] Changeset by Comparison Visualization
