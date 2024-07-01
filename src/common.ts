@@ -1,5 +1,3 @@
-import { onNavigate } from '@violentmonkey/url';
-
 export type ExtractedId = number | null;
 
 export const extractAndValidateId = (path: string, matcher: RegExp): ExtractedId => {
@@ -11,15 +9,3 @@ export const extractAndValidateId = (path: string, matcher: RegExp): ExtractedId
     return null;
 }
 
-export const onNavigateCallback = (matcher: RegExp, callback: (id: ExtractedId) => void) => {
-    const handler = () => {
-        const {pathname} = new URL(window.location.href);
-        const changeset = extractAndValidateId(pathname, matcher);
-        if (changeset !== null) {
-            callback(changeset);
-        }
-    };
-
-    onNavigate(handler);
-    handler();
-}

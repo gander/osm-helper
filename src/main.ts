@@ -1,12 +1,28 @@
 import {createApp} from 'vue';
 import ChangeSet from './ChangeSet.vue';
-import {onNavigateCallback} from './common';
+import {extractAndValidateId} from './common';
 
+const targetSidebarContent = document.getElementById('sidebar_content');
 
-onNavigateCallback(/^\/changeset\/(\d+)\/?$/, (changeset) => {
-    if (changeset !== null) {
-        setTimeout(() => {
-            const targetElement = document.querySelector('div#sidebar_content .browse-section p.details');
+if (targetSidebarContent) {
+    const observer = new MutationObserver((mutationList) => {
+        for (const mutation of mutationList) {
+            if (mutation.type === 'childList') {
+                for (const node of mutation.addedNodes) {
+                    if (node.nodeName === 'DIV' && node instanceof Element) {
+                        initChangeset(node);
+                    }
+                }
+            }
+        }
+    });
+
+    observer.observe(targetSidebarContent, {attributes: true, childList: true, subtree: true});
+
+    function initChangeset(node: ParentNode) {
+        const changeset = extractAndValidateId(location.pathname, /^\/changeset\/(\d+)\/?$/);
+        if (changeset !== null) {
+            const targetElement = node.querySelector('div#sidebar_content .browse-section p.details');
             if (targetElement) {
                 createApp(ChangeSet, {changeset}).mount(
                     (() => {
@@ -15,11 +31,14 @@ onNavigateCallback(/^\/changeset\/(\d+)\/?$/, (changeset) => {
                         return app;
                     })(),
                 );
+                return true;
             }
-        }, 500);
+
+        }
+        return false;
     }
-});
 
-
+    initChangeset(document);
+}
 
 

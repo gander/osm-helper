@@ -15,7 +15,6 @@ export default defineConfig({
       build: {
         externalGlobals: {
           vue: cdn.jsdelivr('Vue', 'dist/vue.global.prod.js'),
-          '@violentmonkey/url': cdn.jsdelivr('VM', 'dist/index.js'),
         },
       },
     }),

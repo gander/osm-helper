@@ -3,7 +3,7 @@
   "description": "OSM Helper",
   "author": "Adam Gąsowski (gander)",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,11 +12,11 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@violentmonkey/url": "^0.1.0",
     "vue": "^3.4.31"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/node": "^20.14.9",
     "@vitejs/plugin-vue": "^5.0.5",
     "release-it": "^17.4.0",
     "typescript": "^5.5.2",
