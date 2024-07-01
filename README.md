@@ -13,6 +13,8 @@ This script adds convenient links to popular OSM tools directly on the OSM websi
 - [x] Changeset by Comparison Visualization
 - [x] Achavi - Augmented OSM Change Viewer
 - [ ] AI integration to assist with mapping tasks
+- [ ] Configuration panel to enable/disable tool links
+- [ ] Customizable add own tool links
 
 These tools help mappers quickly access additional information and perform quality checks on their edits.
 
