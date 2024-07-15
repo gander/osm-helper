@@ -2,8 +2,20 @@
 
 A UserScript to enhance the OpenStreetMap (OSM) editing experience.
 
-**The script was tested only on Firefox, with the [Violentmonkey](https://violentmonkey.github.io/) plugin, 
-it may not work or not work correctly on other browsers and other userscript managers. I planned to verify compatibility.**
+## Compatibility
+
+| Browser |  Ver  | UserScript Manager |   Ver    | Compatibility |
+|:-------:|:-----:|:------------------:|:--------:|:--------------|
+| Firefox | `128` |   Violentmonkey    | `2.20.0` | ✅ Yes         |
+| Firefox | `128` |    Tampermonkey    | `5.1.1`  | ✅ Yes         |
+| Firefox | `128` |    Greasemonkey    | `4.12.0` | ✅ Yes         |
+|         |       |                    |          |               |
+| Chrome  | `126` |   Violentmonkey    | `2.20.0` | ✅ Yes         |
+| Chrome  | `126` |    Tampermonkey    | `4.19.0` | ✅ Yes         |
+|         |       |                    |          |               |
+|  Edge   | `126` |   Violentmonkey    | `2.20.0` | ✅ Yes         |
+|  Edge   | `126` |    Tampermonkey    | `5.1.1`  | ✅ Yes         |
+
 
 ## Features
 
@@ -18,8 +30,8 @@ This script adds convenient links to popular OSM tools directly on the OSM websi
 - [ ] AI integration to assist with mapping tasks
 - [ ] Configuration panel to enable/disable tool links
 - [ ] Customizable add own tool links
-- [ ] Provide matrix of compatible browsers and userscript managers
-- [ ] Make the script compatible with more browsers and userscript managers
+- [x] Provide matrix of compatible browsers and userscript managers
+- [x] Make the script compatible with more browsers and userscript managers
 
 These tools help mappers quickly access additional information and perform quality checks on their edits.
 
