@@ -12,17 +12,17 @@
     "release": "release-it"
   },
   "dependencies": {
-    "vue": "^3.4.31"
+    "vue": "^3.4.37"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/node": "^20.14.10",
-    "@vitejs/plugin-vue": "^5.0.5",
+    "@types/node": "^22.2.0",
+    "@vitejs/plugin-vue": "^5.1.2",
     "release-it": "^17.6.0",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.3",
-    "vite-plugin-monkey": "^4.0.4",
-    "vue-tsc": "^2.0.26"
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vite-plugin-monkey": "^4.0.6",
+    "vue-tsc": "^2.0.29"
   },
   "release-it": {
     "$schema": "https://unpkg.com/release-it/schema/release-it.json",
