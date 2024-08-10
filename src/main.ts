@@ -11,6 +11,7 @@ if (targetSidebarContent) {
                 for (const node of mutation.addedNodes) {
                     if (node.nodeName === 'DIV' && node instanceof Element) {
                         initChangeset(node);
+                        initNode(node);
                     }
                 }
             }
@@ -38,7 +39,33 @@ if (targetSidebarContent) {
         return false;
     }
 
+    function initNode(node: ParentNode): boolean {
+        const nodeId = extractAndValidateId(location.pathname, /^\/node\/(\d+)\/?$/);
+        if (nodeId !== null) {
+            const targetElement = node.querySelector('li a[href^="/changeset/"]');
+            if (targetElement) {
+                let href = targetElement.getAttribute('href');
+
+                if (href) {
+                    const changeset = extractAndValidateId(href, /^\/changeset\/(\d+)\/?$/);
+                    if (changeset !== null) {
+                        createApp(ChangeSet, {changeset}).mount(
+                            (() => {
+                                const app = document.createElement('div');
+                                targetElement.insertAdjacentElement('afterend', app);
+                                return app;
+                            })(),
+                        );
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     initChangeset(document);
+    initNode(document);
 }
 
 
