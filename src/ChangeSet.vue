@@ -27,9 +27,6 @@ fetchDetails().then(data => createdBy.value = data);
 <template>
   <div>
     <ul>
-      <li v-if="createdBy">
-        Created By: <strong>{{ createdBy }}</strong>
-      </li>
       <li>
         <a target="_blank" :href="achaviUrl">
           Augmented OSM Change Viewer (Achavi)
@@ -46,6 +43,9 @@ fetchDetails().then(data => createdBy.value = data);
         </a>
       </li>
     </ul>
+    <div v-if="createdBy">
+      Created By: <strong>{{ createdBy }}</strong>
+    </div>
   </div>
 </template>
 
