@@ -40,7 +40,7 @@ if (targetSidebarContent) {
     }
 
     function initNode(node: ParentNode): boolean {
-        const nodeId = extractAndValidateId(location.pathname, /^\/node\/(\d+)\/?$/);
+        const nodeId = extractAndValidateId(location.pathname, /^\/(node|way)\/(\d+)\/?$/, 2);
         if (nodeId !== null) {
             const targetElement = node.querySelector('li a[href^="/changeset/"]');
             if (targetElement) {
