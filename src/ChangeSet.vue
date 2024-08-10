@@ -7,7 +7,7 @@ const {changeset} = defineProps({
 
 async function fetchDetails() {
   try {
-    const response = await fetch(`https://api.openstreetmap.org/api/0.6/changeset/${changeset}.json`);
+    const response = await fetch(`https://www.openstreetmap.org/api/0.6/changeset/${changeset}.json`);
     const {elements} = await response.json();
     return elements[0]?.tags?.created_by;
   } catch (error) {
