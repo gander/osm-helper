@@ -1,5 +1,6 @@
 import {createApp} from 'vue';
 import ChangeSet from './ChangeSet.vue';
+import Relation from './Relation.vue';
 import {extractAndValidateId} from './common';
 
 const targetSidebarContent = document.getElementById('sidebar_content');
@@ -12,6 +13,7 @@ if (targetSidebarContent) {
                     if (node.nodeName === 'DIV' && node instanceof Element) {
                         initChangeset(node);
                         initNode(node);
+                        initRelation(node);
                     }
                 }
             }
@@ -64,8 +66,27 @@ if (targetSidebarContent) {
         return false;
     }
 
+    function initRelation(node: ParentNode): boolean {
+        const relationId = extractAndValidateId(location.pathname, /^\/(relation)\/(\d+)\/?$/, 2);
+        if (relationId !== null) {
+            const targetElement = node.querySelector('li a[href^="/changeset/"]');
+            if (targetElement) {
+                createApp(Relation, {relationId}).mount(
+                    (() => {
+                        const app = document.createElement('div');
+                        targetElement.insertAdjacentElement('afterend', app);
+                        return app;
+                    })(),
+                );
+                return true;
+            }
+        }
+        return false;
+    }
+
     initChangeset(document);
     initNode(document);
+    initRelation(document);
 }
 
 
