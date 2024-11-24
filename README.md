@@ -2,21 +2,6 @@
 
 A UserScript to enhance the OpenStreetMap (OSM) editing experience.
 
-## Compatibility
-
-| Browser |  Ver  | UserScript Manager |   Ver    | Compatibility |
-|:-------:|:-----:|:------------------:|:--------:|:--------------|
-| Firefox | `128` |   Violentmonkey    | `2.20.0` | ✅ Yes         |
-| Firefox | `128` |    Tampermonkey    | `5.1.1`  | ✅ Yes         |
-| Firefox | `128` |    Greasemonkey    | `4.12.0` | ✅ Yes         |
-|         |       |                    |          |               |
-| Chrome  | `126` |   Violentmonkey    | `2.20.0` | ✅ Yes         |
-| Chrome  | `126` |    Tampermonkey    | `4.19.0` | ✅ Yes         |
-|         |       |                    |          |               |
-|  Edge   | `126` |   Violentmonkey    | `2.20.0` | ✅ Yes         |
-|  Edge   | `126` |    Tampermonkey    | `5.1.1`  | ✅ Yes         |
-
-
 ## Features
 
 This script adds convenient links to popular OSM tools directly on the OSM website:
