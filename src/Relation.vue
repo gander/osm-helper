@@ -14,7 +14,7 @@ async function fetchDetails() {
   try {
     const response = await fetch(`https://www.openstreetmap.org/api/0.6/relation/${relationId}.json`);
     const {elements: [{tags}]} = await response.json();
-    return tags['public_transport:version'] === "2" && ['bus', 'tram'].includes(tags['route']);
+    return tags['public_transport:version'] === "2" && ['bus', 'tram'].includes(tags['route'] || tags['disused:route']);
   } catch (error) {
     console.error(error);
   }
